@@ -20,7 +20,7 @@ jobs:
           flutter-version: '3.44.0'
           channel: 'stable'
       - run: flutter pub get
-      - run: flutter build apk --release --no-validate-required-plugins
+      - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
           name: android-apk
