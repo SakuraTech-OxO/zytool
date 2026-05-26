@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
             const Spacer(),
             PageNavigation(
               currentPage: 0,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],

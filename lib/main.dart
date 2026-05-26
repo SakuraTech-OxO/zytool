@@ -11,6 +11,7 @@ import 'package:file_picker/file_picker.dart';
 import 'models/upload_file.dart';
 import 'pages/home_page.dart';
 import 'pages/transfer_page.dart';
+import 'pages/protobuf_page.dart';
 import 'pages/when_page.dart';
 import 'pages/register_page.dart';
 import 'pages/about_page.dart';
@@ -257,7 +258,7 @@ class _MainPageState extends State<MainPage> {
 
   Future<void> _pickFiles() async {
     try {
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      FilePickerResult? result = await FilePicker.pickFiles(
         allowMultiple: true,
         withData: true,
       );
@@ -439,6 +440,10 @@ class _MainPageState extends State<MainPage> {
                 isUploading: _isUploading,
                 onPickFiles: _pickFiles,
               ),
+              ProtobufPage(
+                pageController: _pageController,
+                isEasterEggUnlocked: _isEasterEggUnlocked,
+              ),
               if (_isEasterEggUnlocked)
                 WhenPage(
                   pageController: _pageController,
@@ -606,10 +611,11 @@ class _MainPageState extends State<MainPage> {
     final navItems = [
       {'icon': '🎪', 'title': '欢迎页面', 'page': 0},
       {'icon': '📤', 'title': '临时传输', 'page': 1},
-      if (_isEasterEggUnlocked) {'icon': '💡', 'title': '异想天开', 'page': 2},
-      {'icon': '🌏', 'title': '站点一览', 'page': _isEasterEggUnlocked ? 3 : 2},
-      {'icon': '👒', 'title': '聊聊ZY沂沨', 'page': _isEasterEggUnlocked ? 4 : 3},
-      {'icon': '📧', 'title': '联系ZY沂沨', 'page': _isEasterEggUnlocked ? 5 : 4},
+      {'icon': '🔧', 'title': 'Protobuf工具', 'page': 2},
+      if (_isEasterEggUnlocked) {'icon': '💡', 'title': '异想天开', 'page': 3},
+      {'icon': '🌏', 'title': '站点一览', 'page': _isEasterEggUnlocked ? 4 : 3},
+      {'icon': '👒', 'title': '聊聊ZY沂沨', 'page': _isEasterEggUnlocked ? 5 : 4},
+      {'icon': '📧', 'title': '联系ZY沂沨', 'page': _isEasterEggUnlocked ? 6 : 5},
     ];
 
     return Positioned(

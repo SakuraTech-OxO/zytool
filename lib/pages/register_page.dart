@@ -95,8 +95,8 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
             PageNavigation(
-              currentPage: isEasterEggUnlocked ? 3 : 2,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              currentPage: isEasterEggUnlocked ? 4 : 3,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],

@@ -125,8 +125,8 @@ class AboutPage extends StatelessWidget {
               ),
             ),
             PageNavigation(
-              currentPage: isEasterEggUnlocked ? 4 : 3,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              currentPage: isEasterEggUnlocked ? 5 : 4,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],

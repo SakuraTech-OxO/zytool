@@ -53,8 +53,8 @@ class WhenPage extends StatelessWidget {
             _buildCircularCountdown(days, hours, minutes, seconds, progress),
             const Spacer(),
             PageNavigation(
-              currentPage: 2,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              currentPage: 3,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],

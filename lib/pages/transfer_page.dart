@@ -84,7 +84,7 @@ class TransferPage extends StatelessWidget {
             ),
             PageNavigation(
               currentPage: 1,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],

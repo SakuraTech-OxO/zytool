@@ -117,8 +117,8 @@ class ContactPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             PageNavigation(
-              currentPage: isEasterEggUnlocked ? 5 : 4,
-              totalPages: isEasterEggUnlocked ? 6 : 5,
+              currentPage: isEasterEggUnlocked ? 6 : 5,
+              totalPages: isEasterEggUnlocked ? 7 : 6,
               pageController: pageController,
             ),
           ],
