@@ -111,6 +111,26 @@ flutter build macos
 flutter build linux
 ```
 
+## 自动构建
+
+项目配置了 GitHub Actions 自动构建，支持以下平台：
+
+| 平台 | 触发条件 | 产物 |
+|------|----------|------|
+| Android | push to main | APK |
+| Windows | push to main | exe |
+| Linux | push to main | bundle |
+| macOS | push to main | app |
+| Web | push to main | html/js |
+
+### 发布新版本
+
+```bash
+# 创建 tag 并推送，自动触发 Release 构建
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 ## 应用图标
 
 应用图标使用 `assets/image/headimg_dl.jpg`，可通过以下命令生成：
