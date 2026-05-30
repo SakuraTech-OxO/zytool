@@ -18,7 +18,7 @@ String _getDefaultBackendUrl() {
 }
 
 class QQBotAuthPage extends StatefulWidget {
-  final Function(String token, int userId, String appId) onLoginSuccess;
+  final Function(String token, int userId, String appId, String backendUrl) onLoginSuccess;
 
   const QQBotAuthPage({super.key, required this.onLoginSuccess});
 
@@ -136,6 +136,7 @@ class _QQBotAuthPageState extends State<QQBotAuthPage> {
           data['data']['token'],
           data['data']['userId'],
           data['data']['appId'],
+          _backendUrl,
         );
       } else {
         _showError(data['error'] ?? '登录失败');
@@ -169,6 +170,7 @@ class _QQBotAuthPageState extends State<QQBotAuthPage> {
           data['data']['token'],
           data['data']['userId'],
           data['data']['appId'],
+          _backendUrl,
         );
       } else {
         _showError(data['error'] ?? '注册失败');
@@ -236,6 +238,16 @@ class _QQBotAuthPageState extends State<QQBotAuthPage> {
                     ),
                   ),
                   const SizedBox(height: 32),
+                  // 后端地址输入
+                  GlassTextField(
+                    controller: TextEditingController(text: _backendUrl),
+                    placeholder: '后端地址 (http://...)',
+                    prefixIcon: const Icon(Icons.dns, color: Colors.white70),
+                    onChanged: (value) {
+                      _backendUrl = value;
+                    },
+                  ),
+                  const SizedBox(height: 16),
                   GlassTextField(
                     controller: _appIdController,
                     placeholder: 'AppID',

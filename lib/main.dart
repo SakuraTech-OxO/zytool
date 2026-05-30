@@ -340,11 +340,12 @@ class _MainPageState extends State<MainPage> {
                           },
                         )
                       : QQBotAuthPage(
-                          onLoginSuccess: (token, userId, appId) {
+                          onLoginSuccess: (token, userId, appId, backendUrl) {
                             setState(() {
                               _qqbotToken = token;
                               _qqbotUserId = userId;
                               _qqbotAppId = appId;
+                              _qqbotBackendUrl = backendUrl;
                             });
                           },
                         ),
