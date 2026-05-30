@@ -1,17 +1,9 @@
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import '../widgets/page_navigation.dart';
 
 class ProtobufPage extends StatefulWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
-
-  const ProtobufPage({
-    super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
-  });
+  const ProtobufPage({super.key});
 
   @override
   State<ProtobufPage> createState() => _ProtobufPageState();
@@ -193,11 +185,7 @@ class _ProtobufPageState extends State<ProtobufPage> with SingleTickerProviderSt
                 ],
               ),
             ),
-            PageNavigation(
-              currentPage: 2,
-              totalPages: widget.isEasterEggUnlocked ? 7 : 6,
-              pageController: widget.pageController,
-            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

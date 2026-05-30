@@ -1,0 +1,20 @@
+{
+  "name": "qqbot-backend",
+  "version": "1.0.0",
+  "description": "QQ Bot Backend with SQLite storage and WebSocket push",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "sql.js": "^1.10.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.16.0"
+  }
+}

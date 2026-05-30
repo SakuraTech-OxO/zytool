@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 import '../utils/url_launcher.dart';
 import '../widgets/contact_item.dart';
-import '../widgets/page_navigation.dart';
 
 class ContactPage extends StatelessWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
-
-  const ContactPage({
-    super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
-  });
+  const ContactPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -116,11 +108,7 @@ class ContactPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
-            PageNavigation(
-              currentPage: isEasterEggUnlocked ? 6 : 5,
-              totalPages: isEasterEggUnlocked ? 7 : 6,
-              pageController: pageController,
-            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

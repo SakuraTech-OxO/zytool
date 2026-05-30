@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import '../models/upload_file.dart';
 import '../utils/url_launcher.dart';
-import '../widgets/page_navigation.dart';
 
 class RegisterPage extends StatelessWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
   final List<SiteLink> siteLinks;
 
   const RegisterPage({
     super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
     required this.siteLinks,
   });
 
@@ -94,11 +89,7 @@ class RegisterPage extends StatelessWidget {
                 },
               ),
             ),
-            PageNavigation(
-              currentPage: isEasterEggUnlocked ? 4 : 3,
-              totalPages: isEasterEggUnlocked ? 7 : 6,
-              pageController: pageController,
-            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

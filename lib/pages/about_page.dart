@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widgets/chat_message.dart';
-import '../widgets/page_navigation.dart';
 
 const String kFallbackHead = 'assets/image/headimg_dl.jpg';
 const String kFallbackAvatarAsset = 'assets/image/img_avatar.png';
 
 class AboutPage extends StatelessWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
-
-  const AboutPage({
-    super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
-  });
+  const AboutPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -124,11 +116,7 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
             ),
-            PageNavigation(
-              currentPage: isEasterEggUnlocked ? 5 : 4,
-              totalPages: isEasterEggUnlocked ? 7 : 6,
-              pageController: pageController,
-            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

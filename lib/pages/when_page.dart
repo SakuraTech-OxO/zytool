@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widgets/page_navigation.dart';
 
 class WhenPage extends StatelessWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
   final Duration timeUntilBirthday;
 
   const WhenPage({
     super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
     required this.timeUntilBirthday,
   });
 
@@ -21,12 +16,11 @@ class WhenPage extends StatelessWidget {
     final seconds = timeUntilBirthday.inSeconds % 60;
     final progress = 1 - seconds / 60;
 
-    return Container(
-      color: Colors.transparent,
+    return SizedBox.expand(
       child: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Spacer(),
             RichText(
               text: const TextSpan(
                 children: [
@@ -51,12 +45,6 @@ class WhenPage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             _buildCircularCountdown(days, hours, minutes, seconds, progress),
-            const Spacer(),
-            PageNavigation(
-              currentPage: 3,
-              totalPages: isEasterEggUnlocked ? 7 : 6,
-              pageController: pageController,
-            ),
           ],
         ),
       ),

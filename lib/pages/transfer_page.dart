@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import '../models/upload_file.dart';
 import '../widgets/file_item.dart';
-import '../widgets/page_navigation.dart';
 
 class TransferPage extends StatelessWidget {
-  final PageController pageController;
-  final bool isEasterEggUnlocked;
   final List<UploadFile> uploadFiles;
   final bool isUploading;
   final VoidCallback onPickFiles;
 
   const TransferPage({
     super.key,
-    required this.pageController,
-    required this.isEasterEggUnlocked,
     required this.uploadFiles,
     required this.isUploading,
     required this.onPickFiles,
@@ -82,11 +77,7 @@ class TransferPage extends StatelessWidget {
                       },
                     ),
             ),
-            PageNavigation(
-              currentPage: 1,
-              totalPages: isEasterEggUnlocked ? 7 : 6,
-              pageController: pageController,
-            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

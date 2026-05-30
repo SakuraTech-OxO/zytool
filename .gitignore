@@ -46,5 +46,11 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 cos-upload-api.md
-pb.js
-pb.php
+QQBotChat
+*/node_modules
+qqbot-backend/data
+qqbot-backend/qq-official-bot
+qqbot-backend/src/qqbot-client.js
+qqbot-backend/qqbot-index.js
+qqbot-backend/test-api.ps1
+qqbot-backend/sdkEnhancer.js
